@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('carnet_digitals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('tipo_usuario'); // 'aprendiz' o 'instructor'
+            $table->string('tipo_usuario');
             $table->string('nombre_completo');
-            $table->string('ficha')->nullable(); // solo para aprendices
-            $table->string('programa');
-            $table->string('jornada');
-            $table->string('foto')->nullable(); // ruta de la imagen
+            $table->string('ficha')->nullable();
+            $table->string('programa')->nullable();
+            $table->string('jornada')->nullable();
+            $table->string('foto')->nullable(); 
             $table->timestamps();
         });
     }
