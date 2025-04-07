@@ -69,7 +69,7 @@
                     </div>
                 </a>
                 <br>
-                <a href="{{ route('carnet__digital.index') }}">
+                <a href="{{ route('carnets_digital.index') }}">
                     <div class="p-1.5 mt-3 flex items-center rounded-md px-4 hover:bg-green-300">
                         <i class="bi bi-card-image"></i>
                         <span class="ml-4 font-bold" style="font-family: Caviar Dreams;">Carnet Digital</span>

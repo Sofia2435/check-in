@@ -24,7 +24,6 @@
         <thead>
             <tr  style="background-color:rgb(199, 255, 183); font-family: Caviar Dreams;">
                 <th class="p-2">Usuario</th>
-                <th class="p-2">Rol</th>
                 <th class="p-2">Motivo</th>
                 <th class="p-2">Documento</th>
                 <th class="p-2">Acciones</th>
@@ -34,7 +33,6 @@
             @foreach ($justificaciones as $justificacion)
                 <tr class="border-b">
                     <td class="p-2">{{ $justificacion->user->name }}</td>
-                    <td class="p-2">{{ $justificacion->user->role }}</td>
                     <td class="p-2">{{ $justificacion->motivo }}</td>
                     <td class="p-2">
                         @if ($justificacion->documento)

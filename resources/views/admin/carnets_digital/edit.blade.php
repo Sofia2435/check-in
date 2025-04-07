@@ -11,7 +11,7 @@
             </div>
         @endif
 
-        <form action="{{ route('carnet__digital.update', $carnet->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('carnets_digital.update', $carnet->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

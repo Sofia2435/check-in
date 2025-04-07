@@ -29,23 +29,7 @@
                 @error('nombre_completo') <small class="text-danger">{{ $message }}</small> @enderror
             </div>
 
-            <div class="mb-4">
-                <label class="form-label font-semibold">Ficha</label>
-                <input type="text" name="ficha" class="form-control w-full rounded border-gray-300 py-2 px-3 text-base" style="background-color: rgb(241, 255, 237);" value="{{ old('ficha') }}">
-                @error('ficha') <small class="text-danger">{{ $message }}</small> @enderror
-            </div>
 
-            <div class="mb-4">
-                <label class="form-label font-semibold">Programa de formación</label>
-                <input type="text" name="programa" class="form-control w-full rounded border-gray-300 py-2 px-3 text-base" style="background-color: rgb(241, 255, 237);" value="{{ old('programa') }}" required>
-                @error('programa') <small class="text-danger">{{ $message }}</small> @enderror
-            </div>
-
-            <div class="mb-6">
-                <label class="form-label font-semibold">Jornada</label>
-                <input type="text" name="jornada" class="form-control w-full rounded border-gray-300 py-2 px-3 text-base" style="background-color: rgb(241, 255, 237);" value="{{ old('jornada') }}" required>
-                @error('jornada') <small class="text-danger">{{ $message }}</small> @enderror
-            </div>
 
             <button type="submit" class="btn w-full text-green-700 py-2 rounded-lg font-semibold" style="background-color:rgb(183, 255, 155); font-family: 'Caviar Dreams'; font-size: 15px;">
                 Enviar Solicitud

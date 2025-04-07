@@ -4,16 +4,24 @@
 
 
 @section('contents')
+<style>
+    @import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+
+    * {
+        font-family: 'Caviar Dreams', sans-serif;
+    }
+</style>
     <div class="min-h-screen flex items-center justify-center bg-green-50" style="background-color:rgb(232, 255, 238); font-family: Caviar Dreams;">
         <div class="w-full max-w-md p-6 rounded-xl shadow-lg border border-green-300" style="background-color:rgb(232, 255, 238)">
             <h1 class="mb-4 text-center text-green-700" style="font-family: Caviar Dreams; font-size: 32px;">Agregar Instructor</h1>
             <hr class="mb-4 border-green-300"/>
 
+            
     <form action="{{ route('instructor.store') }}" method="POST">
         @csrf
         <div>
             <label class="block text-sm font-medium text-green-900" style="font-family: Caviar Dreams; font-size: 15px;">Nombre</label><br>
-            <input id="nombre" name="nombre" type="text" 
+            <input id="name" name="name" type="text" 
                 class="mt-1 block w-full rounded-md border-green-300 shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg py-2 px-3" 
                 style="background-color:rgb(223, 250, 230); border-color:rgb(62, 113, 73);">
         </div>
@@ -37,4 +45,6 @@
              Enviar
          </button>
     </form>
+    </div>
+    </div>
 @endsection

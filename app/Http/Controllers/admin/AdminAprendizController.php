@@ -41,7 +41,6 @@ class AdminAprendizController extends Controller
             'password' => 'required|string|min:6',
         ]);
 
-        // Crear el aprendiz
         $user = new User();
         $user->name = $validated['name'];
         $user->email = $validated['email'];

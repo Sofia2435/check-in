@@ -78,6 +78,6 @@ class AdminJustificacionesController extends Controller
         $justificacion = Justificaciones::findOrFail($id);
         $justificacion->delete();
 
-        return redirect()->route('admin.justificaciones.index')->with('success', 'Justificación eliminada correctamente');
+        return redirect()->route('justificaciones.index')->with('success', 'Justificación eliminada correctamente');
     }
 }

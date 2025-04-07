@@ -47,6 +47,7 @@ class AdminInstructorController extends Controller
         $user->email = $validated['email'];
         $user->password = bcrypt($validated['password']);
         $user->save();
+        
 
         return redirect()->route('instructor.index')->with('success', 'Instructor creado correctamente.');
     }

@@ -60,7 +60,7 @@ Route::middleware(['auth', 'role:administrador'])->group(function () {
 
     Route::resource('programaciones', AdminProgramacionesController::class);
  
-    Route::resource('carnet__digital', AdminCarnetDigitalController::class);
+    Route::resource('carnets_digital', AdminCarnetDigitalController::class);
 
     Route::resource('admin/justificaciones', AdminJustificacionesController::class);
 

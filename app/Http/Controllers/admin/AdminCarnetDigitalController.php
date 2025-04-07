@@ -74,7 +74,7 @@ class AdminCarnetDigitalController extends Controller
             $carnet->save();
         }
 
-        return redirect()->route('admin.carnets_digital.index')->with('success', 'Carnet actualizado correctamente.');
+        return redirect()->route('carnets_digital.index')->with('success', 'Carnet actualizado correctamente.');
     }
 
     /**

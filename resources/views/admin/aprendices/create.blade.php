@@ -15,7 +15,6 @@
             <h1 class="mb-4 text-center text-green-700" style="font-family: josephsophia; font-size: 32px;">Agregar Aprendiz</h1>
             <hr class="mb-4 border-green-300"/>
 
-            {{-- Mostrar errores de validación --}}
             @if ($errors->any())
                 <div class="mb-4 text-red-700 font-semibold text-sm">
                     <ul>

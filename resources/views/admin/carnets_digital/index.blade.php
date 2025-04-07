@@ -41,7 +41,7 @@
                                 @endif
                             </td>
                             <td class="px-4 py-2 border text-center">
-                                <a href="{{ route('carnet__digital.edit', $carnet->id) }}" class="text-blue-600 hover:underline" style="font-family: Caviar Dreams;">Adjuntar Imagen</a>
+                                <a href="{{ route('carnets_digital.edit', $carnet->id) }}" class="text-blue-600 hover:underline" style="font-family: Caviar Dreams;">Adjuntar Imagen</a>
                             </td>
                         </tr>
                     @endforeach
