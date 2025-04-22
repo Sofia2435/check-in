@@ -1,6 +1,13 @@
 @extends('aprendiz.dashboard')
 
 @section('contents')
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+
+        * {
+            font-family: 'Caviar Dreams', sans-serif;
+        }
+    </style>
 @if (session('success'))
     <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
         {{ session('success') }}

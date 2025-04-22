@@ -46,7 +46,7 @@ class InstructorCarnetDigitalController extends Controller
             'ficha' => $request->ficha,
             'programa' => $request->programa,
             'jornada' => $request->jornada,
-            // 'foto' lo sube el admin
+            
         ]);
     
         return redirect()->route('carnet_digital.index')->with('success', 'Formulario enviado correctamente');

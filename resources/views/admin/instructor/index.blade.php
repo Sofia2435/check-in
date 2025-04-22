@@ -1,6 +1,13 @@
 @extends('admin.dashboard')
 
 @section('contents')
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+
+        * {
+            font-family: 'Caviar Dreams', sans-serif;
+        }
+    </style>
     @if (session('success'))
         <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
             {{ session('success') }}
@@ -14,6 +21,36 @@
             </a>
         <hr class="my-4 border-gray-300"/>
 
+        <form method="GET" action="{{ route('instructor.index') }}" class="mb-4">
+            <div class="flex items-center gap-2">
+                <label for="email" class="text-gray-700">Filtrar por correo:</label>
+                <select name="email" id="email"
+                    class="border border-gray-300 rounded px-3 py-1 w-72" style="font-family: Caviar Dreams;">
+                    <option value="">-- Todos los correos --</option>
+                    @foreach($emailsDisponibles as $usuario)
+                        <option value="{{ $usuario->email }}" {{ request('email') == $usuario->email ? 'selected' : '' }}>
+                            {{ $usuario->id }} - {{ $usuario->email }}
+                        </option>
+                    @endforeach
+                </select>
+
+                <button type="submit"
+                    class="bg-green-200 text-green-900 px-3 py-1 rounded hover:bg-green-300"
+                    style="font-family: Caviar Dreams;">
+                    Filtrar
+                </button>
+
+                @if(request('email'))
+                    <a href="{{ route('instructor.index') }}"
+                        class="text-sm text-blue-600 hover:underline ml-2"
+                        style="font-family: Caviar Dreams;">
+                        Limpiar filtro
+                    </a>
+                @endif
+            </div>
+        </form>
+
+        
     <div class="overflow-x-auto">
     <table class="w-full table-auto text-left border">
         <thead>

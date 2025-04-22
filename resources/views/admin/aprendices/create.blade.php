@@ -12,7 +12,7 @@
 </style>
     <div class="min-h-screen flex items-center justify-center bg-green-50" style="background-color:rgb(232, 255, 238)">
         <div class="w-full max-w-md p-6 rounded-xl shadow-lg border border-green-300" style="background-color:rgb(232, 255, 238)">
-            <h1 class="mb-4 text-center text-green-700" style="font-family: josephsophia; font-size: 32px;">Agregar Aprendiz</h1>
+            <h1 class="mb-4 text-center text-green-700" style=" font-size: 32px;">Agregar Aprendiz</h1>
             <hr class="mb-4 border-green-300"/>
 
             @if ($errors->any())

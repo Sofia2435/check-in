@@ -18,12 +18,9 @@ class AdminController extends Controller
 
     public function index()
     {
-        // Verifica si el usuario es un administrador
         if (auth()->user()->tipo_usuario == 'admin') {
-            // Si es admin, mostrar todos los usuarios
             $usuarios = User::all();
         } else {
-            // Si no es admin, solo los aprendices
             $usuarios = User::where('tipo_usuario', 'aprendiz')->get();
         }
     

@@ -32,6 +32,8 @@ class AuthController extends Controller
         $role = UserRole::Instructor;
     }
 
+    
+
     User::create([
         'name' => $request->name,
         'email' => $request->email,

@@ -15,13 +15,25 @@ class AdminInstructorController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::where('roles', 'instructor')->get(); 
-
-        return view('admin.instructor.index', compact('users'));
+        $email = $request->input('email');
+    
+        // Lista de instructores con ID y correo
+        $emailsDisponibles = User::where('roles', 'instructor')
+            ->select('id', 'email')
+            ->get();
+    
+        // Filtrar si hay un correo seleccionado
+        $users = User::where('roles', 'instructor')
+            ->when($email, function ($query, $email) {
+                return $query->where('email', $email);
+            })
+            ->get();
+    
+        return view('admin.instructor.index', compact('users', 'email', 'emailsDisponibles'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      */

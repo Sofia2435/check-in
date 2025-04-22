@@ -18,31 +18,6 @@ class AdminCarnetDigitalController extends Controller
         $carnets = CarnetDigital::latest()->get();
         return view('admin.carnets_digital.index', compact('carnets'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -64,7 +39,7 @@ class AdminCarnetDigitalController extends Controller
         $carnet = CarnetDigital::findOrFail($id);
 
         if ($request->hasFile('foto')) {
-            // Borra la imagen anterior si existe
+           
             if ($carnet->foto && Storage::disk('public')->exists($carnet->foto)) {
                 Storage::disk('public')->delete($carnet->foto);
             }
@@ -77,11 +52,4 @@ class AdminCarnetDigitalController extends Controller
         return redirect()->route('carnets_digital.index')->with('success', 'Carnet actualizado correctamente.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

@@ -35,11 +35,14 @@
                             <td class="px-4 py-2 border" style="font-family: Caviar Dreams;">{{ $carnet->jornada }}</td>
                             <td class="px-4 py-2 border text-center">
                                 @if($carnet->foto)
-                                    <img src="{{ asset('storage/' . $carnet->foto) }}" width="60" class="rounded-md mx-auto">
+                                    <a href="{{ asset('storage/' . $carnet->foto) }}" target="_blank">
+                                        <img src="{{ asset('storage/' . $carnet->foto) }}" width="60" class="rounded-md mx-auto hover:scale-105 transition-transform">
+                                    </a>
                                 @else
                                     <span class="text-gray-500 italic" style="font-family: Caviar Dreams;">Sin imagen</span>
                                 @endif
                             </td>
+
                             <td class="px-4 py-2 border text-center">
                                 <a href="{{ route('carnets_digital.edit', $carnet->id) }}" class="text-blue-600 hover:underline" style="font-family: Caviar Dreams;">Adjuntar Imagen</a>
                             </td>
